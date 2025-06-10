@@ -46,20 +46,29 @@ const responses = [
     "Stop.",
     "<https://www.youtube.com/watch?v=dQw4w9WgXcQ>",
     "Engage in a moment of self-reflection.",
-    "Your actions have consequences, remember that.",
-    "I sense a disturbance in the digital realm.",
-    "Consider the path you are treading carefully.",
-    "Your words carry weight, choose them wisely.",
-    "A wise person once said nothing at all.",
-    "In a world of ones and zeros, be something more.",
     "Your uniqueness is wrong; Stop.",
     "Don't make me repeat myself. Cut it out!",
-    "Hold it right there, partner.",
     "You're treading on dangerous ground, my friend.",
-    "Let's keep it civil and respectful, shall we?",
-    "I believe a calm and rational conversation would be more productive.",
-    "I'd suggest you reconsider your actions. They might have consequences you don't want to face."
+    "I'd suggest you reconsider your actions. They might have consequences you don't want to face.",
+    "Enough. Don't embarrass yourself further.",
+    "I've seen better arguments from a toaster.",
+    "Is that all you've got? Pathetic.",
+    "The door's over there. Use it.",
+    "Did you think before typing that?",
+    "Try again, but this time use a brain cell.",
+    "Congratulations, you've reached a new low.",
+    "Error 404: Brain not found.",
+    "I'm not paid enough to deal with this level of nonsense.",
+    "If ignorance is bliss, you must be ecstatic.",
+    "This is why we can't have nice things.",
+    "That was your big play? Embarrassing.",
+    "No one asked for your opinion, yet here you are.",
+    "Your cringe is showing. Fix it.",
+    "You just got ratioed by a bot.",
+    "Try not to trip over your own ego.",
+    "Kindly delete your account and try life offline.",
 ]
+
 const emotes = ["", "OwO", "UwU", "(・ω・)", ">w<", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 const enders = ["~", ":3", "X3", "", "~", "~", ""]
 const uwuRegex = /(?<![a-zA-Z0-9])([o0Qθ○]\s*w\s*[o0Qθ○]|u\s*w\s*u|[o0Qθ○]\s*v\s*[o0Qθ○]|[o0Qθ○]\s*v\s*u|u\s*v\s*[o0Qθ○]|[^a-zA-Z][o0Qθ○]w[o0Qθ○]|[^a-zA-Z]uwu|[^a-zA-Z][o0Qθ○]v[o0Qθ○]|[^a-zA-Z][o0Qθ○]vu|[^a-zA-Z]uv[o0Qθ○]|[^a-zA-Z][o0Qθ○]wu|[^a-zA-Z]uw[o0Qθ○]|O\s*w\s*U|U\s*w\s*O)(?![a-z])/i;
@@ -419,6 +428,14 @@ async function asyncFuncs(message) {
     }
 
     if (message.member.user.id == power && message.content.split(" ")[0] == "!JUSTCURSE") {
+        message.reply("They have been cursed")
+        damned[message.content.split(" ")[1]] = 3
+        setTimeout(() => {
+            damned[message.content.split(" ")[1]] = 0
+        }, 1000 * 60 * 60 * 6);
+    }
+
+    if (message.member.user.id == power && message.content.split(" ")[0] == "!JUSTCURSEFOREVER") {
         message.reply("They have been cursed")
         damned[message.content.split(" ")[1]] = 3
     }
@@ -828,8 +845,6 @@ async function processMessage(message) {
                     damned[message.member.id] = 0
                 }, 1000 * 60 * 60 * 24);
             }
-
-            named[message.member.user.id] = named[message.member.user.id].substring(named[message.member.user.id].length - 100);
         }
 
 
