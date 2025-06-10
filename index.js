@@ -67,6 +67,16 @@ const responses = [
     "You just got ratioed by a bot.",
     "Try not to trip over your own ego.",
     "Kindly delete your account and try life offline.",
+    "Try me. See what happens.",
+    "Did you think that was clever? Think again.",
+    "You're not special. Stop pretending.",
+    "Go insult a mirror, at least it can reflect.",
+    "Congratulations, nobody cares.",
+    "Imagine thinking this is a good idea.",
+    "Step away from the keyboard.",
+    "Next time, try sending something worth reading.",
+    "Take a number, get in line to be ignored.",
+    "Running out of patience... and you’re the reason.",
 ]
 
 const emotes = ["", "OwO", "UwU", "(・ω・)", ">w<", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
